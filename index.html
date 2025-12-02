@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird - 音调控制版</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h1>🎵 Flappy Bird - 音调控制版</h1>
+            <p class="instructions">
+                使用你的声音控制小鸟！<br>
+                音调高 → 小鸟上升 | 音调低 → 小鸟下降 | 安静 → 平飞
+            </p>
+        </div>
+        
+        <div class="game-wrapper">
+            <canvas id="gameCanvas"></canvas>
+            
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">开始游戏</button>
+                <button id="calibrateBtn" class="btn btn-secondary">校准麦克风</button>
+            </div>
+            
+            <div class="audio-info">
+                <div class="info-item">
+                    <span>音量:</span>
+                    <div class="meter">
+                        <div id="volumeBar" class="meter-bar"></div>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span>音调:</span>
+                    <span id="pitchValue">-- Hz</span>
+                </div>
+                <div class="info-item">
+                    <span>控制:</span>
+                    <span id="commandValue">--</span>
+                </div>
+                <div class="info-item">
+                    <span>分数:</span>
+                    <span id="score">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="gameOver" class="game-over hidden">
+            <h2>游戏结束！</h2>
+            <p>最终分数: <span id="finalScore">0</span></p>
+            <button id="restartBtn" class="btn btn-primary">再来一次</button>
+        </div>
+    </div>
+    
+    <script src="audio.js"></script>
+    <script src="game.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
