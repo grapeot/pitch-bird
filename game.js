@@ -7,9 +7,9 @@ class Game {
         this.ctx = canvas.getContext('2d');
         this.audioProcessor = audioProcessor;
         
-        // 设置画布尺寸
-        this.canvas.width = 500;
-        this.canvas.height = 600;
+        // 设置画布尺寸（横屏满屏）
+        this.canvas.width = 800;
+        this.canvas.height = 500;
         
         // 游戏状态
         this.isRunning = false;
@@ -32,7 +32,7 @@ class Game {
         this.pipes = [];
         this.pipeWidth = 60;
         this.pipeGap = 220;  // 增加管道间隙，更容易通过
-        this.pipeSpacing = 350;  // 增加管道间距，给玩家更多反应时间
+        this.pipeSpacing = 700;  // 管道间距增加两倍，更稀疏
         this.lastPipeX = this.canvas.width;
         
         // 初始化
