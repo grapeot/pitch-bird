@@ -23,8 +23,8 @@ class AudioProcessor {
         this.currentPitch = 0;
         this.currentVolume = 0;
         
-        // 时间平滑：1秒的滑动窗口
-        this.smoothingWindowSize = 60; // 假设60fps，1秒约60个样本
+        // 时间平滑：0.5秒的滑动窗口
+        this.smoothingWindowSize = 30; // 假设60fps，0.5秒约30个样本
         this.pitchHistory = []; // 音调历史记录
         this.volumeHistory = []; // 音量历史记录
         this.smoothedPitch = 0;
